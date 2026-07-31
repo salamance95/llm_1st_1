@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>나문의</h1>
+    <form method="post" action="/login">
+      <h2>문의유형</h2>
+      <select name="type">
+        <optgroup label="문의유형">
+          <option value="broke">단순고장</option>
+          <option value="nope" selected>그냥 때쓰기</option>
+          <option value="return">반품/환불</option>
+          <option value="ext">기타</option>
+        </optgroup>
+      </select>
+      <br />
+      <h2>심각도</h2>
+      <label><input type="radio" value="HM" name="HM" />조금 심각</label>
+      <label><input type="radio" value="HM" name="HM" />약간 심각</label>
+      <label><input type="radio" value="HM" name="HM" />매우 심각</label>
+      <label><input type="radio" value="HM" name="HM" />진짜 심각</label>
+      <label
+        ><input type="radio" value="HM" name="HM" />진짜 레알루다 심각</label
+      >
+      <br />
+      <h2>발생일시</h2>
+      <label>
+        <input type="date" name="when" />
+      </label>
+      <fieldset>
+        <legend>문의 내용 입력</legend>
+        <textarea
+          name="detail"
+          rows="3"
+          placeholder="내용을 작성해주세요."
+        ></textarea>
+        <br />
+        <input type="file" name="attach" accept=".pdf,image/*" />
+        <br />
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+      </fieldset>
+    </form>
+  </body>
+</html>

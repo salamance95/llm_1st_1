@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>회원가입 폼</h1>
+    <br />
+    <form method="post" action="/login">
+      <h2>사용자 정보</h2>
+      <label
+        >이름
+        <input type="text" name="name" required placeholder="이름" />
+      </label>
+      <br />
+      <label
+        >이메일
+        <input type="email" name="email" required placeholder="이메일" />
+      </label>
+      <br />
+      <label
+        >비밀번호
+        <input
+          type="password"
+          name="password"
+          required
+          placeholder="비밀번호"
+        />
+      </label>
+      <br />
+      <label
+        >생년월일
+        <input type="date" name="date" required />
+      </label>
+      <br />
+      <h2>소속</h2>
+      <select name="in">
+        <optgroup label="소속">
+          <option value="무소속" selected>무소속</option>
+          <option value="신사임당">신사임당</option>
+          <option value="포도당">포도당</option>
+          <option value="내아임당">내아임당</option>
+        </optgroup>
+      </select>
+      <br />
+      <h3>역할</h3>
+      <label> <input type="radio" value="role" name="king" />대장 </label>
+      <label> <input type="radio" value="role" name="sub" />부대장 </label>
+      <label> <input type="radio" value="role" name="ttakkari" />따까리 </label>
+      <br />
+      <h2>관심사</h2>
+      <label>국어<input type="checkbox" value="ko" /></label>
+      <label>수학<input type="checkbox" value="math" /></label>
+      <label>과학<input type="checkbox" value="sc" /></label>
+      <label>영어<input type="checkbox" value="eng" /></label>
+      <textarea name="ext" placeholder="ex:생윤,사문" rows="3"></textarea>
+      <br />
+      <br />
+      <br />
+      <br />
+      <button type="submit">확인</button>
+      <button type="reset">초기화</button>
+    </form>
+  </body>
+</html>
