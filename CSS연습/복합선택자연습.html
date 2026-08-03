@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      span.orange {
+        color: orange;
+      }
+      ul > .orange {
+        color: red;
+      }
+      div.red {
+        color: blue;
+      }
+      .orange + li {
+        color: blueviolet;
+      }
+      /* 선택한것 다음의 색(일반 형제) */
+      .orange ~ li {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <span> 안녕하세요 </span>
+    </div>
+    <span class="orange">오렌지</span>
+    <div class="red">레드</div>
+    <div>
+      <p>오렌지</p>
+      <p class="red">레드</p>
+      <p>red</p>
+    </div>
+    <ul>
+      <li class="orange">오렌지</li>
+      <li>레드</li>
+      <li>수박</li>
+      <li>망고</li>
+    </ul>
+  </body>
+</html>

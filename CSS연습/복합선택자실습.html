@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 일치 선택자 */
+      p.lion {
+        background-color: red;
+      }
+      /* 후손 선택자*/
+      ul .lion {
+        background-color: greenyellow;
+      }
+      /* ID선택자 */
+      #tiger {
+        background-color: yellow;
+      }
+      /* 클래스 선택자 */
+      .lion {
+        color: sienna;
+      }
+      /* 후손 선택자 */
+      ul > .lion {
+        font-weight: 800;
+      }
+      /* 인접 형제 선택자 */
+      #tiger + li {
+        background-color: skyblue;
+      }
+      /* 일반 형제 선택자 */
+      li.lion ~ li {
+        background-color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>복합선택자 사용 연습</h1>
+    <p>동물원에 왔어요</p>
+    <div>
+      <ul>
+        <span> 여긴 사파리! </span>
+        <li>곰</li>
+        <li id="tiger">호랑이</li>
+        <li>팬더</li>
+        <span class="lion"> 사자1</span>
+        <li class="lion">사자2</li>
+        <li>사육사 allie</li>
+        <li>사육사 진형</li>
+      </ul>
+      <span class="lion">사파리 밖의 사자</span>
+    </div>
+    <p class="lion">야생의 사자</p>
+  </body>
+</html>
