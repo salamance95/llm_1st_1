@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .menu-hot::before {
+        content: "[Hot] ";
+        color: red;
+      }
+      .menu-new::after {
+        content: " {추천}";
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>섹션 13. 가상요소::before /::after</h2>
+    <section>
+      <p class="menu-hot">떡볶이</p>
+      <p class="menu-new">김밥</p>
+    </section>
+  </body>
+</html>

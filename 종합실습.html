@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 400px;
+      }
+      textarea {
+        width: 100%;
+      }
+      form button {
+        float: right;
+        padding: 5px 15px;
+        background-color: #f96666;
+        color:white;
+        font-size:17px;
+        border-radius: :10px;
+        border:none;
+      }
+      h3:hover {
+        color: white;
+        background-color: black;
+      }
+      textarea:focus {
+        background-color: pink;
+      }
+      button:active {
+        background-color: blue;
+        color: yellow;
+      }
+
+      input[type="checkbox"]:checked + label {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <h3>건의사항을 적어주세요!</h3>
+      <textarea rows="4">건의사항</textarea>
+      <br />
+      <input type="checkbox" name="color" value="blue" />
+      <label>작성내용을확인했습니다.</label>
+      <br />
+      <button>제출</button>
+    </form>
+  </body>
+</html>
