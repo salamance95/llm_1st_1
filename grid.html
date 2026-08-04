@@ -6,73 +6,66 @@
     <title>Document</title>
     s
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+      }
       .item {
-        width: 60px;
-        height: 60px;
-        display: grid;
-        background-color: lightblue;
-        border:2px solid black;
-        text-align: center;
-        line-height: 60px;
-      }
-      .cell {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 1.4rem;
+        line-height: 4fr;
+        font-weight: 700;
 
-        background-color: lightgray;
-        border:2px solid black;
-        text-align: center;
-        line-height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
-      .s12-items{
-        display: grid;
-        grid-template-columns: repeat(3,100px);
-        grid-template-rows: 80px;
-        place-items: center;
-        background-color: lightgray;
+      .item1 {
+        background-color: red;
+        grid-column: auto/span 6;
       }
-      .s12-content{
-        display: grid;
-        grid-template-columns: repeat(3,60px);
-        grid-template-rows: 60px;
-        place-content: center;
-        height: 140px;
-        background-color: lightgray;
+      .item2 {
+        background-color: orange;
+        grid-column: 2/4;
       }
-      .s13-container{
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 60px 60px;
-        gap:6px;
+      .item3 {
+        background-color: lightcoral;
+        grid-column: 2/6;
       }
-      .s13-wide{
-        grid-column: 1/3;
-        /* 열 라인 1~3 사이 2칸 차지 */
-        background-color: violet;
+      .item4 {
+        background-color: yellow;
+        grid-column: auto/span 2;
       }
-      .s13-tall{
-        /* 시작점부터 span 2칸 */
-        grid-row:1/span 2;
-        background-color: lightyellow;
+      .item5 {
+        background-color: green;
+        grid-column: 2/4;
+      }
+      .item6 {
+        background-color: blue;
+        grid-column: 4/6;
+      }
+      .item7 {
+        background-color: purple;
+        grid-column: 1/7;
       }
     </style>
   </head>
   <body>
-<section>
-    <h2>섹션 12. place-items / place-content</h2>
-    <p>place-items: center (셀 안 정렬)</p>
-    <div class="s12-items">
-      <div class="item">1</div>
-      <div class="item">2</div>
-      <div class="item">3</div>
+    <div class="container">
+      <div class="item item1">red</div>
+      <div class="item item1">orange</div>
+      <div class="item item1">lightcoral</div>
+      <div class="item item1">yellow</div>
+      <div class="item item1">green</div>
+      <div class="item item1">blue</div>
+      <div class="item item1">purple</div>
     </div>
-    <p>place-content: center (그리드 전체 정렬)</p>
-    <div class="s13-container">
-      <div class="cell s13-wide">1</div>
-      <div class="cell s13-tall">2</div>
-      <div class="cell">3</div>
-      <div class="cell">4</div>
-      <div class="cell">5</div>
-    </div>
-  </section>
-</section>
   </body>
 </html>
