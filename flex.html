@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: flex;
+        background-color: gray;
+        /* flex-direction: row; */
+        flex-wrap: wrap-reverse;
+        justify-content: space-evenly;
+      }
+      .c-strech {
+        align-content: stretch;
+      }
+      .c-center {
+        align-content: center;
+      }
+      .c-end {
+        align-content: end;
+      }
+      .item {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        line-height: 30px;
+        background-color: beige;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>stretch</p>
+    <div class="container c-center>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">5</div>
+      <div class="item">5</div>
+    </div>
+    <p>center</p>
+    <div class="container c-center>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">3</div>
+      <div class="item">3</div>
+      <div class="item">3</div>
+      <div class="item">3</div>
+    </div>
+    <p>end</p>
+    <div class="container c-end>
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">3</div>
+      <div class="item">3</div>
+      <div class="item">3</div>
+      <div class="item">3</div>
+    </div>
+  </body>
+</html>

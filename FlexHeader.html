@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* 기본 초기화 및 공통 스타일 */
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .header {
+        display: flex;
+        background-color: gray;
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        align-items: center; /* 세로 중앙 정렬 */
+      }
+
+      /* 메뉴를 가로로 나열하기 위한 설정 */
+      .menu {
+        display: flex;
+        gap: 20px; /* 메뉴 사이 간격 */
+      }
+
+      /* Header 1: LOGO 왼쪽, MENU 오른쪽 */
+      .header1 {
+        justify-content: space-between;
+      }
+
+      /* Header 2: MENU 3개를 양 끝과 가운데로 균등 분배 */
+      .header2 {
+        justify-content: space-between;
+      }
+
+      /* Header 3: LOGO 왼쪽, MENU 가운데, LOGIN 오른쪽 */
+      .header3 {
+        justify-content: space-between;
+      }
+      /* Header 3의 메뉴를 정가운데로 보내기 위한 여백 처리 */
+      .header3 .menu {
+        margin: 0 auto;
+      }
+
+      /* Header 4: 왼쪽 묶음(LOGO+MENU)과 오른쪽 묶음(LOGIN+SIGNUP) 양 끝 정렬 */
+      .header4 {
+        justify-content: space-between;
+      }
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 30px; /* 로고와 메뉴 사이 간격 */
+      }
+      .header-right {
+        display: flex;
+        gap: 10px; /* 버튼 사이 간격 */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ── 실습 4: Flex Header 만들기 ── -->
+    <section>
+      <h2>실습 4. Flex Header 만들기</h2>
+
+      <!-- Header 1 -->
+      <header class="header header1">
+        <div class="logo">LOGO</div>
+        <ul class="menu">
+          <li><a href="#">MENU1</a></li>
+          <li><a href="#">MENU2</a></li>
+          <li><a href="#">MENU3</a></li>
+        </ul>
+      </header>
+
+      <!-- Header 2 -->
+      <header class="header header2">
+        <ul class="menu" style="width: 100%; justify-content: space-between">
+          <li><a href="#">MENU1</a></li>
+          <li><a href="#">MENU2</a></li>
+          <li><a href="#">MENU3</a></li>
+        </ul>
+      </header>
+
+      <!-- Header 3 -->
+      <header class="header header3">
+        <div class="logo">LOGO</div>
+        <ul class="menu">
+          <li><a href="#">MENU1</a></li>
+          <li><a href="#">MENU2</a></li>
+          <li><a href="#">MENU3</a></li>
+        </ul>
+        <button class="auth-btn">LOGIN</button>
+      </header>
+
+      <!-- Header 4 -->
+      <header class="header header4">
+        <div class="header-left">
+          <div class="logo">LOGO</div>
+          <ul class="menu">
+            <li><a href="#">MENU1</a></li>
+            <li><a href="#">MENU2</a></li>
+            <li><a href="#">MENU3</a></li>
+          </ul>
+        </div>
+        <div class="header-right">
+          <button class="auth-btn">LOGIN</button>
+          <button class="auth-btn">SIGNUP</button>
+        </div>
+      </header>
+    </section>
+  </body>
+</html>
