@@ -19,141 +19,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>4일차 연습문제 — CSS 선택자 · 간단한 속성들</title>
-
-    <style>
-      /* ── 기본 제공 스타일 (문제 아님 — 수정 금지) ── */
-      body {
-        font-family: "맑은 고딕", "Malgun Gothic", sans-serif;
-        margin: 20px;
-      }
-      section {
-        border-bottom: 1px dashed #ccc;
-        padding: 16px 8px;
-      }
-      h2 {
-        font-size: 17px;
-        color: #333;
-      }
-      .hint-text {
-        color: #888;
-        font-size: 13px;
-      }
-      .inner-box {
-        border: 1px solid #bbb;
-        padding: 6px;
-        margin: 6px 0;
-      }
-      h1 {
-        color: #1a3a6e;
-        text-align: center;
-      }
-
-      /* ═══ 문제 1 ═══ */
-      /* 미리 선언된 규칙입니다. 수정·삭제 금지! (문제 1-2에서 덮어씁니다) */
-      .notice {
-        background-color: gold;
-        padding: 8px;
-      }
-
-      /* 문제 1: 여기에 작성 */
-
-      /* ═══ 문제 2 ═══ */
-      /* 문제 2: 여기에 작성 */
-      .ok {
-        background-color: seagreen;
-        color: white;
-      }
-      .warn {
-        background-color: gold;
-      }
-      #critical {
-        background-color: crimson;
-        color: white;
-        font-weight: 800;
-      }
-      /* ═══ 문제 3 ═══ */
-      /* 문제 3: 여기에 작성 */
-      .zone-a > p {
-        color: crimson;
-      }
-      .zone-b p {
-        color: darkorange;
-      }
-      li .urgent {
-        color: firebrick;
-        font-weight: 800;
-      }
-      .urgent {
-        color: red;
-      }
-      /* ═══ 문제 4 ═══ */
-      /* 문제 4: 여기에 작성 */
-      .now {
-        font-weight: 800;
-      }
-      .now + li {
-        background-color: skyblue;
-      }
-      .now ~ li {
-        text-decoration: underline;
-      }
-      /* ═══ 문제 5 ═══ */
-      /* 문제 5: 여기에 작성 */
-      .visitor-log li:nth-child(2n) {
-        background-color: #eee;
-      }
-      .visitor-log li:first-child {
-        font-weight: 800;
-      }
-      .visitor-log li:last-child {
-        color: red;
-      }
-      .task-list li:not(.done) {
-        color: green;
-      }
-      /* ═══ 문제 6 ═══ */
-      /* 문제 6: 여기에 작성 */
-      .alarm::before {
-        content: "▲ 경고";
-        color: red;
-      }
-      .fyi::after {
-        content: "(신규)";
-        color: blue;
-      }
-      :disabled {
-        background-color: lightcoral;
-      }
-      [placeholder="도서 번호"] {
-        background-color: lightyellow;
-      }
-      /* ═══ 문제 7 ═══ */
-      /* 문제 7: 여기에 작성 */
-      .search-btn:hover {
-        background-color: gold;
-      }
-      .search-btn:active {
-        background-color: crimson;
-        color: white;
-      }
-      .search-input:focus {
-        background-color: lightyellow;
-      }
-      /* ═══ 문제 8 [도전] — 5일차 진도(박스모델) 이후 풀기 ═══ */
-      /* 문제 8: 여기에 작성 */
-      .book-card {
-        display: inline-block;
-        width: 240px;
-        border: 2px solid #1971c2;
-        border: radius 120ex;
-        padding: 12px;
-        margin: 8px;
-      }
-      .card-title {
-        height: 36px;
-        line-height: 36px;
-      }
-    </style>
+    <link rel="stylesheet" href="./99_연습문제.css" />
   </head>
   <body>
     <!-- 문제 1에서 스타일링할 페이지 제목입니다. -->
@@ -173,8 +39,8 @@
     02_CSS_03_간단한_속성들_개념코드 폴더의 섹션05 파일(text-align)
   -->
     <section>
-      <h2 style>문제 1. 기본 문법과 우선순위</h2>
-      <p style="background-color: lightsteelblue" class="notice">
+      <h2>문제 1. 기본 문법과 우선순위</h2>
+      <p class="notice">
         공지: 금일 14:00~15:00 어린이 열람실 소독이 진행됩니다.
       </p>
       <p class="hint-text">
@@ -233,9 +99,9 @@
       </div>
       <ul class="book-list">
         <li>세계 문화 기행</li>
-        <li class="urgent">어린 왕자(연체)</li>
+        <li class="urgent">어린 왕자 (연체)</li>
         <li>과학 상식 사전</li>
-        <li class="urgent">그리스 신화(연체)</li>
+        <li class="urgent">그리스 신화 (연체)</li>
       </ul>
     </section>
 
