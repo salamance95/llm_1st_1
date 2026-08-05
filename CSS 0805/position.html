@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 80px;
+        height: 80px;
+        background-color: lightblue;
+        border: 2px solid black;
+        text-align: center;
+        line-height: 80px;
+      }
+      .s1-box {
+        position: static;
+      }
+      .s2-moved {
+        position: relative;
+        /* top: 20px;
+        left: 40px; */
+        bottom: 40px;
+        background-color: lightcoral;
+      }
+      .s3-parent {
+        position: relative;
+        height: 180px;
+        background-color: lightgoldenrodyellow;
+        border: 2px solid black;
+      }
+      .s3-child {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background-color: yellow;
+      }
+      .s4-fixed {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+      }
+      .s5-scroll {
+        height: 160px;
+        overflow: auto;
+        border: 20px solid black;
+      }
+      .s5-sticky {
+        position: sticky;
+        top: 5px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 섹션 1 :position state - 기본 흐름 -->
+    <section>
+      <h2>position: static-기본흐름</h2>
+      <div class="box s1-box">1</div>
+      <div class="box s1-box">2</div>
+      <div class="box s2-moved">3</div>
+    </section>
+    <section>
+      <h2>섹션3: position:absolute</h2>
+      <div class="s3-parent">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box s3-child">3</div>
+      </div>
+    </section>
+    <section>
+      <h2>섹션 4 position:fixed</h2>
+      <div class="box s4-fixed">fixed 배지</div>
+    </section>
+    <section>
+      <h2>섹션5 position: sticky</h2>
+      <div class="box s5-scroll">
+        <div class="s5-sticky">붙는 제목</div>
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+        <p>내용5</p>
+      </div>
+    </section>
+  </body>
+</html>

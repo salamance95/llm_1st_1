@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        display: flex;
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        line-height: 150px;
+      }
+      * {
+        background-color: white;
+      }
+      /* 9 다음 A B C D E F  1A=16+10*/
+      .s9-hex {
+        background-color: #ffd8a8;
+      }
+      .s9-rgba {
+        background-color: rgba(255, 255, 255, 0);
+      }
+      .s10-basic {
+        backgroud: linear-gradient(#1971c2, #2f9e44);
+      }
+      .s11-base {
+        height: 200px;
+        margin: 10px;
+        background-image: url(./aaa.jpg);
+      }
+      .s11-no {
+        background-repeat: no-repeat;
+      }
+      .s11-x {
+        background-repeat: repeat-x;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>섹션9: 백그라운드 컬러</h2>
+      <div class="box s9-hex">Hex:#ffd8a8</div>
+      <div class="box s9-rgba">rgba:반투명 파랑</div>
+      <div class="box s10-basic">색두개 위->아래</div>
+      <div class="box"></div>
+      <div class="s11-base"></div>
+      <div class="s11-base s11-x"></div>
+      <div class="s11-base s11-no"></div>
+    </section>
+  </body>
+</html>

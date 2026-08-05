@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .s13-frame {
+        height: 140px;
+        overflow: auto;
+        border: 1px solid black;
+        margin-bottom: 10px;
+        background-color: aliceblue;
+        background-image: url(aaa.jpg);
+        background-repeat: no-repeat;
+        background-position: center 10px;
+      }
+      .s13-local {
+        background-attachment: local;
+      }
+      .s14-base {
+        height: 150px;
+        border: 1px solid black;
+        background-color: aliceblue;
+        background-image: url(/aaa.jpg);
+        background-repeat: no-repeat;
+        background-position: center 10px;
+      }
+      .s14-cover {
+        background-size: cover;
+      }
+      .s14-contain {
+        background-size: contain;
+      }
+      .s14-px {
+        background-size: 200px 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>섹션 13- 백그라운드 attachment</h2>
+      <p>scroll 기번- 내부 스크롤 시 배경은 고정</p>
+      <div class="s13-frame">
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+        <p>내용5</p>
+        <p>내용6</p>
+      </div>
+
+      <p>local- 내부 스크롤 과 함꼐 배경도 이동</p>
+      <div class="s13-frame s13-local">
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+        <p>내용5</p>
+        <p>내용6</p>
+      </div>
+    </section>
+    <section>
+      <h2>섹션 14 백그라운드 sie</h2>
+      <p>cover 빈틈없이 덮음</p>
+      <div class="s14-base s14-cover"></div>
+
+      <p>contain 전부 보이게</p>
+      <div class="s14-base s14-contain"></div>
+
+      <p>200px 40px</p>
+      <div class="s14-base s14-px"></div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hint {
+        font-size: 14px;
+        color: #888;
+      }
+      .box {
+        width: 180px;
+        height: 180px;
+        background-color: red;
+      }
+      @keyframes shimmer {
+        0% {
+          background-position: 200% 0;
+        }
+        100% {
+          background-position: -200% 0;
+        }
+      }
+      .sketleton {
+        width: 260px;
+        height: 16px;
+        border-radius: 40x;
+        margin-bottom: 8px;
+        background: linear-gradient(
+          90deg,
+          #e0e0e0 0%,
+          #f5f5f5 50%,
+          #e0e0e0 100%
+        );
+        background-size: 200% 100%;
+        animation: shimmer 1.6s infinite linear;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>섹션 키프레임 기본</h2>
+      <div class="box ani-fade">bounce</div>
+      <p class="hint">새로고침하면 2초동안 서서히나타남</p>
+    </section>
+  </body>
+</html>

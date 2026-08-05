@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .circle {
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background-color: lightblue;
+        position: static;
+      }
+      .b1 {
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 100px;
+        z-index: 1;
+        position: relative;
+        top: 20px;
+        left: 6px;
+        border: 2px solid black;
+      }
+      .b2 {
+        width: 20px;
+        height: 20px;
+        background-color: black;
+        border-radius: 100px;
+        z-index: 2;
+        position: relative;
+        top: 2px;
+        left: 4px;
+      }
+      .b3 {
+        width: 80px;
+        height: 80px;
+        background-color: purple;
+        border-radius: 100px;
+        z-index: 2;
+        position: relative;
+        top: 2px;
+        left: 50px;
+      }
+      .b4 {
+        width: 90px;
+        height: 90px;
+        background-color: red;
+        border-radius: 100px;
+        z-index: 3;
+        position: relative;
+        top: 2px;
+        left: 60px;
+      }
+      .b5 {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        border-radius: 100px;
+        z-index: 1;
+        position: relative;
+        bottom: 10px;
+        left: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>애벌레만들기</h2>
+      <div class="circle">
+        <div class="b1">
+          <div class="b2">
+            <div class="b3">
+              <div class="b4"><div class="b5"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
