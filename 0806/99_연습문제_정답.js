@@ -90,7 +90,9 @@ console.log("===== 문제 7 =====");
   console.log(`판매 기록 일수: ${store.sales.length}일`); // 출력: 판매 기록 일수: 3일
   console.log(`마지막 날 판매량: ${store.sales[store.sales.length - 1]}개`); // 출력: 마지막 날 판매량: 72개
   const avgSales = (store.sales[0] + store.sales[1] + store.sales[2]) / 3;
-  console.log(`${store.name} (점장 ${store.manager}) 평균 판매량: ${avgSales}개`); // 출력: 행복 편의점 (점장 김철수) 평균 판매량: 72개
+  console.log(
+    `${store.name} (점장 ${store.manager}) 평균 판매량: ${avgSales}개`,
+  ); // 출력: 행복 편의점 (점장 김철수) 평균 판매량: 72개
   // 해설: 객체 안의 배열은 store.sales 로 꺼낸 뒤 [인덱스] 로 접근합니다.
   // 인덱스는 0부터 시작하므로 마지막 요소는 항상 [길이 - 1] 입니다. (3개짜리 배열 -> 인덱스 2)
   // (70 + 74 + 72) / 3 = 216 / 3 = 72
