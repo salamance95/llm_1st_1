@@ -68,9 +68,9 @@ console.log("===== 문제 4 =====");
 const stockInput1 = "80";
 const stockInput2 = "50";
 // TODO: 여기에 작성
-console.log(stockInput1 + stockInput2);
-console.log(typeof stockInput1);
-console.log(Number(stockInput1) + Number(stockInput2));
+console.log(`잘못된 합계: ${stockInput1 + stockInput2}`);
+console.log(`자료형: ${typeof stockInput1}`);
+console.log(`정상 합계: ${Number(stockInput1) + Number(stockInput2)}`);
 // ═══ 문제 5 ═══ 복합 대입 · 증감 연산자 [응용]
 // (1) 요구사항: 생수 재고를 단계별로 바꾸며 매 단계 재고를 출력하세요.
 //     - 입고 25개 (stock = stock + 25 처럼 길게 쓰지 말고 복합 대입 연산자 사용)
@@ -84,9 +84,14 @@ console.log(Number(stockInput1) + Number(stockInput2));
 console.log("===== 문제 5 =====");
 let stock = 100;
 // TODO: 여기에 작성
-console.log((stock += 25));
-console.log((stock -= 40));
-console.log((stock = ++stock));
+stock += 25;
+console.log(`입고 후 재고 ${stock}`);
+
+stock -= 40;
+console.log(`판매 후 재고 ${stock}`);
+
+stock++;
+console.log(`반품 후 재고 ${stock}`);
 // ═══ 문제 6 ═══ 비교 · 논리 연산자 [응용]
 // (1) 요구사항: 음료 냉장고 채우기 조건을 검사해 true/false 세 줄을 출력하세요.
 //     - 공간 여유: 진열된 음료가 80개 미만인가? (비교 결과를 isSpaceOk 변수에 저장)
@@ -103,10 +108,12 @@ const fridgeTemp = 4.2;
 const isPowerOn = true;
 // TODO: 여기에 작성
 const isSpaceOk = drinkCount < 80;
-const isTempOk = 3 <= fridgeTemp && fridgeTemp <= 5;
-console.log(drinkCount < 80);
-console.log(3 <= fridgeTemp && fridgeTemp <= 5);
-console.log(isSpaceOk && isTempOk);
+const isTempOk = fridgeTemp >= 3 && fridgeTemp <= 5;
+console.log(`공간 여유: ${isSpaceOk}`);
+console.log(`온도 적정: ${isTempOk}`);
+
+const canFill = isPowerOn && isSpaceOk && isTempOk;
+console.log(`채우기 가능: ${canFill}`);
 // ═══ 문제 7 ═══ [도전] 객체와 배열 접근 종합
 // (1) 요구사항: store 객체에서 값을 꺼내 세 줄을 출력하세요.
 //     - sales 배열의 길이(length)를 이용해 판매 기록 일수 출력
