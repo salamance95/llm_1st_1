@@ -15,7 +15,11 @@
 console.log("===== 문제 1 =====");
 const mathScore = 85;
 // TODO: 여기에 작성
-
+if (mathScore >= 80) {
+  console.log("우수학생 명단에 올랐습니다");
+} else {
+  console.log("다음 시험에서 더 힘내 봅시다");
+}
 // ═══ 문제 2 ═══ else if 다중 조건 [기본]
 // (1) 요구사항: 시험 점수에 따라 등급을 하나만 출력하세요.
 //     - 95 이상: "A등급 - 최우수"
@@ -28,7 +32,15 @@ const mathScore = 85;
 console.log("===== 문제 2 =====");
 const examScore = 88;
 // TODO: 여기에 작성
-
+if (examScore >= 95) {
+  console.log("A등급-최우수");
+} else if (examScore >= 85) {
+  console.log("B등급- 우수");
+} else if (examScore >= 75) {
+  console.log("C등급- 보통");
+} else {
+  console.log("D등급- 노력 필요");
+}
 // ═══ 문제 3 ═══ switch [기본]
 // (1) 요구사항: 시간표의 과목 코드를 switch 문으로 판별해 출력하세요.
 //     - 1: "국어 시간" / 2: "수학 시간" / 3: "체육 시간 - 체육복 준비" / 그 외: "알 수 없는 코드"
@@ -39,7 +51,17 @@ const examScore = 88;
 console.log("===== 문제 3 =====");
 const subjectCode = 3;
 // TODO: 여기에 작성
-
+switch (subjectCode) {
+  case 1:
+    console.log("국어시간");
+  case 2:
+    console.log("수학시간");
+  case 3:
+    console.log("체육시간- 체육복 준비");
+  default:
+    console.log("알수 없는 코드");
+    break;
+}
 // ═══ 문제 4 ═══ 삼항 연산자 [기본]
 // (1) 요구사항: if/else 대신 삼항 연산자로 결과값을 변수에 담아 출력하세요.
 //     - 오답 개수가 0이면 "통과", 아니면 "재시험" 을 testResult 변수에 담기
@@ -53,7 +75,11 @@ console.log("===== 문제 4 =====");
 const wrongCount = 3;
 const currentHour = 22;
 // TODO: 여기에 작성
-
+let result = (wrongCount = 0 ? console.log("통과") : console.log("재시험"));
+let periodName =
+  currentHour >= 18 ? console.log("야간자습") : console.log("정규 수업");
+console.log(`채점 결과:${result}`);
+console.log(`현재 일과 : ${periodName}`);
 // ═══ 문제 5 ═══ for 문 누적 합 [응용]
 // (1) 요구사항: 월~금 급식 인원 배열을 for 문으로 순회하며 합계를 구하세요.
 //     - 합계 변수 weekTotal 을 반복문 "밖"에 let 으로 선언하고 0으로 시작
@@ -66,7 +92,12 @@ const currentHour = 22;
 console.log("===== 문제 5 =====");
 const mealCounts = [120, 135, 110, 150, 125]; // 월, 화, 수, 목, 금
 // TODO: 여기에 작성
-
+let weekTotal = 0;
+for (let i = 0; i < mealCounts.length; i++) {
+  weekTotal += mealCounts[i];
+}
+console.log(`주간 총 급식 인원:${weekTotal}`);
+console.log(`하루 평균 급식 인원:${weekTotal / mealCounts.length}`);
 // ═══ 문제 6 ═══ while + break [응용]
 // (1) 요구사항: 학급 칭찬 점수를 한 번에 40점씩 적립합니다.
 //     - while (true) 로 반복하며 매 회 classPoints 에 40을 더하고 addCount 를 1 증가
@@ -80,7 +111,15 @@ console.log("===== 문제 6 =====");
 let classPoints = 0; // 현재 점수
 let addCount = 0; // 적립 횟수
 // TODO: 여기에 작성
-
+while (true) {
+  classPoints += 40;
+  addCount += 1;
+  if (classPoints >= 200) {
+    break;
+  }
+}
+console.log(`적립횟수:${classPoints}`);
+console.log(`최종점수: ${addCount}`);
 // ═══ 문제 7 ═══ [도전] 시험 점수 분석 (for + continue + if)
 // (1) 요구사항: 시험 점수 배열을 for 문 "하나"로 분석해 세 줄을 출력하세요.
 //     - 값이 -1 이면 결시(시험을 안 봄)이므로 continue 로 건너뛰기
@@ -95,5 +134,23 @@ let addCount = 0; // 적립 횟수
 console.log("===== 문제 7 =====");
 const scores = [72, 81, -1, 85, 77, -1, 83]; // -1 은 결시
 // TODO: 여기에 작성
+let validCount = 0;
+let highCount = 0;
+let maxScore = 0;
+for (let i = 0; i < scores.length; i++) {
+  if (scores[i] == -1) {
+    continue;
+  }
+  validCount++;
+  if (scores[i] >= 80) {
+    highCount++;
+  }
+  if (scores[i] > maxScore) {
+    maxScore = scores[i];
+  }
+}
+console.log(`응시 인원: ${validCount}`);
+console.log(`80점 이상: ${highCount}`);
+console.log(`최고 점수: ${maxScore}`);
 
 // 다 풀었다면 99_연습문제_정답.js 와 비교해 보세요. 수고했습니다!

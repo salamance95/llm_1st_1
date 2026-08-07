@@ -247,5 +247,26 @@ const orders = [
   { customer: "정수진", amount: 17000, status: "done" },
 ];
 // TODO: 여기에 작성
+console.log(`총 주문 건수: ${orders.length}`);
+let doneSum = 0;
+let cancelCount= 0;
+let maxAmount =0;
+let maxCustomer=0;
 
-// 다 풀었다면 99_연습문제_심화2_반복문까지_정답.js 와 비교해 보세요.
+for(let i=0;i<orders.length;i++){
+  if(orders[i].status ==="done"){doneSum+=orders[i].amount;}
+  if(orders[i].status === " cancel"){cancelCount++;}
+  if(orders[i].amount> maxAmount){
+    maxAmount= orders[i].amount;
+    maxCustomer= orders[i].customer;
+  }
+}
+console.log(`완료 금액 합계: ${doneSum}`원);
+console.log(`취소: ${cancelCount}`);
+console.log(`최고 금액 고객: ${maxCustomer}`);
+
+for (let j=0; j<orders.length;j++){
+  if(orders[j].status!=="done")continue;
+  console.log(`${orders[j].customer}:${orders[j].amount>=30000 ? "VIP": "일반"}`)
+}
+  
